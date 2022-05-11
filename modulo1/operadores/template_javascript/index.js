@@ -12,27 +12,64 @@
 // adicionando o termo Number antes do prompt nas variaveis primeiro e segundo números.
 
 //exercicio de escrita 1.
-const idade = Number(prompt("qual sua idade?"));
-const idadeAmigo = Number(prompt("qual a idade do amigo"));
-console.log("Sua idade é maior que a do seu amigo", idade > idadeAmigo)
-console.log(idade - idadeAmigo)
+// const idade = Number(prompt("qual sua idade?"));
+// const idadeAmigo = Number(prompt("qual a idade do amigo"));
+// console.log("Sua idade é maior que a do seu amigo", idade > idadeAmigo)
+// console.log(idade - idadeAmigo)
 
-//exercicio de escrita 2.
-const par = Number(prompt("insira um numero par"));
-console.log(`quanto sobra ao dividirmos o numero par ${par} por 2`, par % 2)
-// o resto da divisão sempre é igul a 0.
-// no caso de um numero ímpar o resto da divisão é igual a 1.
+// //exercicio de escrita 2.
+// const par = Number(prompt("insira um numero par"));
+// console.log(`quanto sobra ao dividirmos o numero par ${par} por 2`, par % 2)
+// // o resto da divisão sempre é igul a 0.
+// // no caso de um numero ímpar o resto da divisão é igual a 1.
 
-// exercicio de escrita 3.
-const idadeAnos = Number(prompt("qual a sua idade"));
-console.log("sua idade em meses é", idadeAnos * 12);
-console.log("sua idade em dias é", idadeAnos * 365);
-console.log("sua idade em horas de vida é", idadeAnos * 365 * 24);
+// // exercicio de escrita 3.
+// const idadeAnos = Number(prompt("qual a sua idade"));
+// console.log("sua idade em meses é", idadeAnos * 12);
+// console.log("sua idade em dias é", idadeAnos * 365);
+// console.log("sua idade em horas de vida é", idadeAnos * 365 * 24);
 
-// exercicio 4.
-const n1 = Number(prompt("escreva um número"));
-const n2 = Number(prompt("escreva outra número"));
-console.log("o primeiro número é maior que o segundo?", n1 > n2);
-console.log("o primeiro número é igual ao segundo?", n1 === n2);
-console.log("o primeiro número é divisivel pelo segundo?", n1 % n2 === 0);
-console.log("o segundo número é divisivel pelo primeiro?", n2 % n1 === 0); 
+// // exercicio 4.
+// const n1 = Number(prompt("escreva um número"));
+// const n2 = Number(prompt("escreva outra número"));
+// console.log("o primeiro número é maior que o segundo?", n1 > n2);
+// console.log("o primeiro número é igual ao segundo?", n1 === n2);
+// console.log("o primeiro número é divisivel pelo segundo?", n1 % n2 === 0);
+// console.log("o segundo número é divisivel pelo primeiro?", n2 % n1 === 0); 
+
+//desafio:
+// A)
+
+let F1 = 77
+let K1 = (F1 - 32) * (5/9) + 273.15
+console.log("77 Graus Fahrenheit é igual a", K1, "Kelvin");
+
+// B)
+let C2 = 80 
+let F2 = C2 * (9/5) + 32
+console.log("80 Graus Celsius é igual a", F2, "Fahrenheit");
+
+// C)
+let C3 = 30
+let F3 = C3 * (9/5) + 32
+console.log("30 graus Celsius é igual a", F3, "Fahrenheit");
+let K3 = (86-32) * (5/9) + 273.15
+console.log("86 graus Fahrenheit é igual a", K3, "Kelvin")
+
+// D)
+let C4 = Number(prompt("informe a temperatura em graus Celsius que desejar."))
+let F4 = C4 * (9/5) + 32
+let K4 = (F4 - 32) * (5/9) + 273.15
+console.log( C4, "em graus Fahrenheit é", F4, ". E ", C4, "em Kelvin é", K4);
+
+
+
+
+
+
+
+
+
+
+
+
