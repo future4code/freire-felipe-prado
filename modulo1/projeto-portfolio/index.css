@@ -6,7 +6,8 @@ header {
     justify-content: center;
 }
 nav{
-    margin: 0 100px;
+    margin: 50px 150px 20px 150px;
+    align-items: center;
 }
 * {
     background-color: rgb(16, 221, 225);
@@ -35,4 +36,47 @@ nav{
 #habilidades{
  margin-bottom: 5px;
  color: brown;
+}
+.imagem{
+  width: 200px;
+  height: 300px;
+}
+#imag{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.imagem:hover{
+    color: rgb(223, 93, 23);
+}
+.tituloimagens{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 50px 0 50px
+}
+.tituloimagens:hover{
+    color: aquamarine;
+}
+#im1{
+    width: 800px;
+  height: 1000px;
+}
+#im2{
+    width: 800px;
+  height: 1000px;
+}
+#im3{
+    width: 800px;
+  height: 1000px;
+}
+#links{
+    margin: 50px 50px;
+}
+#contatos{
+    margin: 100px;
+
 }
