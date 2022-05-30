@@ -3,6 +3,7 @@
 
 // Ex.2.A)
 // [19, 21, 23, 25, 27, 30] 
+
 // B) sim. Podemos acessar o numero através do valor por índice que temos dentro do array.
 
 // Ex.3) 10
