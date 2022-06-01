@@ -1,13 +1,3 @@
-function criarArrayNomesAnimais() {
-    const animais = [
-      { nome: "Cachorro", classificacao: "mamífero" },
-      { nome: "Papagaio", classificacao: "ave" },
-      { nome: "Gato", classificacao: "mamífero" },
-      { nome: "Carpa", classificacao: "peixe" },
-      { nome: "Pomba", classificacao: "ave" }
-    ]
-     return animais.map(animal => animal.nome)
-}
 function filtraTarefas() {
   const tarefas = [
     { titulo: "Fazer Remember", status: "done", tempo: 30 },
@@ -23,9 +13,7 @@ function filtraTarefas() {
     { titulo: "Jogar Videogame", status: "todo", tempo: 120 },
     { titulo: "Assistir Novela", status: "todo", tempo: 90 }
  ]
-const novoArray = tarefas.filter((tarefa)=>{
-  return titulo.tarefa.status
-})
- // Escreva seu código aqui
-
+const novoArray = tarefas.filter(tarefa => tarefa.status == "done").map(tarefa =>
+  tarefa.titulo)
+ return novoArray
 }
