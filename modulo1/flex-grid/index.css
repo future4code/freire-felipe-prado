@@ -1,0 +1,72 @@
+header{
+    display: flex;
+    align-items: center;
+    background-color: mediumvioletred;
+    justify-content: space-between;
+}
+#globo{
+    display: flex;
+}
+#menuLateral{
+    height: 1000px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f2d0e0;
+}
+#menuCentral{
+    display: flex;
+    flex-wrap: wrap;
+}
+.bolo{
+    height: 200px;
+    width: 200px;
+}
+.cardBolo{
+    height: 300px;
+    margin: 20px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+}
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: mediumvioletred;
+}
+
+#cake{
+    height: 15px;
+    width: 15px;
+}
+#home{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#produtos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#carrinho{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#perfil{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.figura{
+    height: 15px;
+    width: 15px;
+}
+.figuraSeta{
+    height: 15px;
+    width: 15px;
+    margin-left: 40px;
+}
+.texto{
+    font-size: medium;
+    justify-content: left;
+}
