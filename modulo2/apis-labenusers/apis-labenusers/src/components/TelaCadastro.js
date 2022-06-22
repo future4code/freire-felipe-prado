@@ -13,7 +13,7 @@ export default class App extends React.Component {
         this.setState({email: event.target.value})
     }
 
-    fazerCadastro = () => {
+    fazerCadastro = () => { // função para acessar a request createUser do postman
        const url = "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users"
         const body = {
             name: this.state.nome,
@@ -32,7 +32,6 @@ export default class App extends React.Component {
        .catch((error) => {
             alert(error.response.data.message)
        })
-    
     }
 
     render () {

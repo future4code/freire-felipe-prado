@@ -78,10 +78,10 @@ import TelaListaUsuarios from "./components/TelaListaUsuarios"
 // export default App;
 
 export default class App extends React.Component {
-  state = {
+  state = { // o etado atual é cadastro
     telaAtual: "cadastro"
   }
-  escolhaTela = () => {
+  escolhaTela = () => { // função que faz a renderização condicional (vai de uma tela pra outra)
     switch (this.state.telaAtual){
       case "cadastro":
         return <TelaCadastro irParaLista={this.irParaLista}/>
@@ -92,7 +92,7 @@ export default class App extends React.Component {
     }
   }
 
-  irParaCadastro = () => {
+  irParaCadastro = () => { // estão dentro do escolhaTela pois setam o estado de telaAtual para funcionar o return do switch case
     this.setState({telaAtual: "cadastro"})
   }
   irParaLista = () => {
