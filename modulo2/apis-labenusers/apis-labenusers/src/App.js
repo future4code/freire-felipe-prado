@@ -11,8 +11,24 @@ const headers = {
 class App extends React.Component {
   state = {
     inputNome: "",
-    inputEmail: ""
+    inputEmail: "",
+    users: []
   }
+  getUsers = () => {
+    const url = "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users"
+    axios.get(url, {
+      headers: headers
+    })
+    .then((response) => {
+      console.log(response.data);
+      this.setState({
+        users:response.data
+      })
+    })
+    .catch((error) => {
+      console.log(error.response.data);
+    });
+  };
 
   onChangeInputNome = (event) => {
     this.setState({
@@ -43,11 +59,16 @@ class App extends React.Component {
 } 
 
   render () {
+    const mapeiaArrayUsuarios = this.state.users.map((user) => {
+      return (user.nome, user.email)
+    })
+
     return (
       <div> 
           <input type="text" value={this.state.inputNome} onChange={this.onChangeInputNome} placeholder="Nome"/>
           <input type="text" value={this.state.inputEmail} onChange={this.onChangeInputEmail} placeholder="Email"/> 
           <button onClick={this.addUser}>criar usuário</button>
+          {mapeiaArrayUsuarios}
       </div>
       
     )  
