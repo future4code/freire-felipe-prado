@@ -9,7 +9,8 @@ class App extends React.Component {
   state = {
     novaPlaylist: "",
     todasPlaylists: [],
-    detalhesPlaylist: []
+    detalhesPlaylist: [],
+    mostraDetalhes: false
   };
   componentDidMount() {
     this.pegarPLaylists();
@@ -45,10 +46,16 @@ class App extends React.Component {
         this.setState({
           detalhesPlaylist: response.data.result.tracks
         })
+        this.abrirPlaylist()
       })
       .catch((error) => {
         console.log(error.response.data);
       });
+  }
+  abrirPlaylist = () => {
+    this.setState({
+      mostraDetalhes: true
+    })
   }
 
   createPlaylist = () => {
@@ -78,22 +85,14 @@ class App extends React.Component {
     const mapearArray = this.state.todasPlaylists.map((playlist, index) => {
       return (
         <div>
-          <li key={index} onClick={() => this.detalhesPlaylist(playlist.id)}>
+          <li key={index} onClick={() => this.playlistTracks(playlist.id)}>
             {playlist.name}
             <button onClick={() => this.deletarPlaylist(playlist.id)}> delete</button>
           </li>
         </div>
       );
     });
-      const mapearPlaylists = this.state.detalhesPlaylist.map((musica) => {
-        return (
-          <div>
-            <p>{musica.name}</p>
-            <p>{musica.artist}</p>
-            <p>{musica.url}</p>
-          </div>
-        )
-      })
+      
     return (
       <div>
         <input
@@ -102,8 +101,18 @@ class App extends React.Component {
           onChange={this.onChangeInputNome}
         />
         <button onClick={this.createPlaylist}>Adicionar Playlist</button>
-        <ol>{mapearArray}
-        {mapearPlaylists}</ol>
+        <ol>{mapearArray}</ol>
+        {this.state.mostraDetalhes === true ? (
+          <div>
+            {this.state.detalhesPlaylist.map((musica) => (
+              <div>
+                <p>Musica: {musica.name}</p>
+                <p>Artista: {musica.artist} </p>
+                <p>Link da música: {musica.url} </p>
+              </div>
+            ))}
+          </div>
+        ) : null}
       </div>
     );
   }
