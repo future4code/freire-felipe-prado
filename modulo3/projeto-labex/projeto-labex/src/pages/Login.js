@@ -3,6 +3,8 @@ import {useNavigate} from 'react-router-dom';
 import useForm from '../Hooks/UseForm';
 import axios from 'axios';
 import { goToAdminHomePage } from '../Routes/Coordinator';
+import Header from '../Components/Header'
+import Footer from '../Components/Footer'
 
 
 
@@ -34,6 +36,8 @@ const Login = () => {
             <input name={"password"} value={form.password} onChange={onChange} required/>
             <button onClick={loginSite}> Entrar </button>
             <button onClick={""}> Voltar </button>
+            <Header/>
+            <Footer/>
         </div>
     )
 }

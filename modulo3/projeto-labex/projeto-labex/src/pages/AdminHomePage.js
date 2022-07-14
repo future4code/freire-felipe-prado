@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import {useNavigate} from 'react-router-dom'
 import {goToLogin} from '../Routes/Coordinator'
+import Header from '../Components/Header'
+import Footer from '../Components/Footer'
 
 const AdminHomePage = () => {
 
@@ -21,6 +23,8 @@ useEffect(() => {
         <div>
             <p>Administrando as Viagens</p>
             <button onClick={() => logOut()}> Sair </button>
+            <Header/>
+            <Footer/>
         </div>
     )
 }

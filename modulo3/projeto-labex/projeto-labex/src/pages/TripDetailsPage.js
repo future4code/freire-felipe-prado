@@ -3,6 +3,8 @@ import {useNavigate, useParams} from 'react-router-dom'
 import {goToLogin} from '../Routes/Coordinator'
 import {useEffect, useState} from 'react'
 import axios from 'axios'
+import Header from '../Components/Header'
+import Footer from '../Components/Footer'
 
 const TripDetailsPage = () => {
     const [details, setDetails] = useState({
@@ -41,6 +43,8 @@ const TripDetailsPage = () => {
     return (
         <div>
             <p>Página Detalhes da Viagem</p>
+            <Header/>
+            <Footer/>
         </div>
     )
 }
