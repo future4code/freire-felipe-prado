@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import {useNavigate} from 'react-router-dom'
-import {goToLogin} from '../Routes/Coordinator'
+import {goBack, goToLogin, goToCreateTripPage} from '../Routes/Coordinator'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 
@@ -21,9 +21,11 @@ useEffect(() => {
 
     return (
         <div>
-            <p>Administrando as Viagens</p>
-            <button onClick={() => logOut()}> Sair </button>
             <Header/>
+            <p>Administrando as Viagens</p>
+            <button onClick={() => goBack()}></button>
+            <button onClick={() => goToCreateTripPage()}></button>
+            <button onClick={() => logOut()}> Sair </button>
             <Footer/>
         </div>
     )

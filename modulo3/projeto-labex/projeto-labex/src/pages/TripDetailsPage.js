@@ -42,8 +42,9 @@ const TripDetailsPage = () => {
 
     return (
         <div>
-            <p>Página Detalhes da Viagem</p>
             <Header/>
+            <p>Página Detalhes da Viagem</p>
+            
             <Footer/>
         </div>
     )

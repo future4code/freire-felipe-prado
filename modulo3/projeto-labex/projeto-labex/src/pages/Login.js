@@ -5,6 +5,7 @@ import axios from 'axios';
 import { goToAdminHomePage } from '../Routes/Coordinator';
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
+import { goBack } from '../Routes/Coordinator';
 
 
 
@@ -35,7 +36,7 @@ const Login = () => {
             <input name={"email"} value={form.email} onChange={onChange} required/>
             <input name={"password"} value={form.password} onChange={onChange} required/>
             <button onClick={loginSite}> Entrar </button>
-            <button onClick={""}> Voltar </button>
+            <button onClick={() => goBack(navigate)}> Voltar </button>
             <Header/>
             <Footer/>
         </div>
