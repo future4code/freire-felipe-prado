@@ -5,6 +5,7 @@ import {useEffect, useState} from 'react'
 import axios from 'axios'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
+import {Body} from '../Components/Body'
 
 const TripDetailsPage = () => {
     const [details, setDetails] = useState({
@@ -43,8 +44,9 @@ const TripDetailsPage = () => {
     return (
         <div>
             <Header/>
+            <Body>
             <p>Página Detalhes da Viagem</p>
-            
+            </Body>
             <Footer/>
         </div>
     )

@@ -6,6 +6,10 @@ import { goToAdminHomePage } from '../Routes/Coordinator';
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 import { goBack } from '../Routes/Coordinator';
+import {ButtonStyled} from '../Components/ButtonStyled'
+import {InputStyled} from '../Components/InputStyled'
+import {Body} from '../Components/Body'
+
 
 
 
@@ -32,12 +36,14 @@ const Login = () => {
 
     return (
         <div>
-            <p>Página de Login</p>
-            <input name={"email"} value={form.email} onChange={onChange} required/>
-            <input name={"password"} value={form.password} onChange={onChange} required/>
-            <button onClick={loginSite}> Entrar </button>
-            <button onClick={() => goBack(navigate)}> Voltar </button>
             <Header/>
+            <Body>
+            <p>Página de Login</p>
+            <InputStyled name={"email"} value={form.email} onChange={onChange} required/>
+            <InputStyled name={"password"} value={form.password} onChange={onChange} required/>
+            <ButtonStyled onClick={loginSite}> Entrar </ButtonStyled>
+            <ButtonStyled onClick={() => goBack(navigate)}> Voltar </ButtonStyled>
+            </Body>
             <Footer/>
         </div>
     )
