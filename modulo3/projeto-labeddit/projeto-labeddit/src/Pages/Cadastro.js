@@ -19,6 +19,7 @@ export const Cadastro = () => {
     const Cadastrar = () => {
         axios.post(`${BaseURL}/users/signup`, form)
         .then((response) => {
+            localStorage.setItem('token', response.data.token)
             goToFeed(navigate)
         })
         .catch((error) => {
@@ -32,7 +33,7 @@ export const Cadastro = () => {
             <input name={"email"} value={form.email} onChange={onChange} required placeholder="E-mail" />
             <input name={"password"} value={form.password} onChange={onChange} required placeholder="Senha" />
             <p>Cadastro</p>
-            <button onClick={() => goToFeed(navigate)}>Cadastrar</button>            
+            <button onClick={() => Cadastrar()}>Cadastrar</button>            
         </div>
     )
 
