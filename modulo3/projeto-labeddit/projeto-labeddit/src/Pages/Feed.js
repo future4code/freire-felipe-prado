@@ -82,8 +82,6 @@ export const Feed = () => {
         )
     })
 
-    
-
     return (
         <div>
             <input name={"title"} value={form.title} onChange={onChange} />
