@@ -4,6 +4,9 @@ import {goToCadastro, goToFeed} from "../Routes/Coordinator";
 import {useForm} from "../Hooks/useForm"
 import {BaseURL} from "../Constants/baseURL"
 import axios from 'axios'
+import {TextField} from '@mui/material';
+import {Button} from '@mui/material' 
+
 
 
 export const Login = () => {
@@ -30,9 +33,12 @@ export const Login = () => {
     return(
         <div>
             <p>pagina Login</p>
-            <input name={"email"} value={form.email} onChange={onChange} required placeholder="Email"/>
+
+            <TextField id="outlined-basic" label="Email" variant="outlined" 
+             name={"email"} value={form.email} onChange={onChange} required />
             <input name={"password"} value={form.password} onChange={onChange} required placeholder="Senha"/>
-            <button onClick={() => fazerLogin()}>Entrar</button>
+            
+            <Button variant="contained" onClick={() => fazerLogin()}>Entrar</Button>
             <button onClick={() => goToCadastro(navigate)}>Cadastrar</button>
         </div>
     )

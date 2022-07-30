@@ -1,15 +1,12 @@
 import React from "react"
-import setaPreta from '../imagens/setaPreta.png'
-import setaBranca from '../imagens/setaBranca.png'
-import downPreta from '../imagens/downPreta.png'
-import downBranca from '../imagens/downBranca.png'
+
 
 export const Votacao = ({curtir, desfazerCurtida, post}) => {
     
     const votoPositivo = post.userVote === 1
-    const imagemPositivo = votoPositivo ? `${setaPreta}` : `${setaBranca}`
+    const imagemPositivo = votoPositivo ?  '⏫' : '🔼'
     const votoNegativo = post.userVote === -1
-    const imagemNegativo = votoNegativo ? `${downPreta}` : `${downBranca}`
+    const imagemNegativo = votoNegativo ? '⏬' : '🔽'
 
     const pegaVotoPositivo = () => {
         return votoPositivo ? desfazerCurtida(post.id) : curtir(post.id, 1)

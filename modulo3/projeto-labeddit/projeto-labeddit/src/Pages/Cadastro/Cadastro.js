@@ -1,9 +1,10 @@
 import React, {useState} from "react";
 import {useNavigate} from 'react-router-dom';
-import { goToFeed } from "../Routes/Coordinator";
-import {useForm} from "../Hooks/useForm"
+import { goToFeed } from "../../Routes/Coordinator";
+import {useForm} from "../../Hooks/useForm"
 import axios from 'axios'
-import {BaseURL} from '../Constants/baseURL'
+import {BaseURL} from '../../Constants/baseURL'
+import { CadastroStyle } from "./CadastroStyle";
 
 
 export const Cadastro = () => {
@@ -28,13 +29,13 @@ export const Cadastro = () => {
     }
 
     return(
-        <div>
+        <CadastroStyle>
             <input name={"username"} value={form.username} onChange={onChange} required placeholder="Nome do usuário" />
             <input name={"email"} value={form.email} onChange={onChange} required placeholder="E-mail" />
             <input name={"password"} value={form.password} onChange={onChange} required placeholder="Senha" />
             <p>Cadastro</p>
             <button onClick={() => Cadastrar()}>Cadastrar</button>            
-        </div>
+        </CadastroStyle>
     )
 
 }

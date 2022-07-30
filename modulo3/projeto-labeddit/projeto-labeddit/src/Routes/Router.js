@@ -1,9 +1,10 @@
 import React from 'react';
 import {Login} from "../Pages/Login";
-import {Cadastro} from "../Pages/Cadastro";
+import {Cadastro} from "../Pages/Cadastro/Cadastro";
 import {Feed} from "../Pages/Feed";
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import {Post} from "../Pages/Post";
+
 
 export const Router = () => {
     return(
