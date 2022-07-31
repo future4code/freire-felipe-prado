@@ -1,4 +1,9 @@
 import React from "react"
+import styled from "styled-components"
+
+const Button = styled.button`
+margin: 5px;
+`
 
 
 export const Votacao = ({curtir, desfazerCurtida, post}) => {
@@ -12,15 +17,15 @@ export const Votacao = ({curtir, desfazerCurtida, post}) => {
         return votoPositivo ? desfazerCurtida(post.id) : curtir(post.id, 1)
     }
     const pegaVotoNegativo = () => {
-        return votoNegativo ? desfazerCurtida(post.id) : curtir(post.id, 1)
+        return votoNegativo ? desfazerCurtida(post.id) : curtir(post.id, -1)
     }
 
 
     return(
         <div>
-            <button onClick={pegaVotoPositivo}>{imagemPositivo}</button>
+            <Button onClick={pegaVotoPositivo}>{imagemPositivo}</Button>
             {post.voteSum||0}
-            <button onClick={pegaVotoNegativo}>{imagemNegativo}</button>
+            <Button onClick={pegaVotoNegativo}>{imagemNegativo}</Button>
         </div>
     )
 }

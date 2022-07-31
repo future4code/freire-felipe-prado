@@ -5,7 +5,9 @@ import {useForm} from "../../Hooks/useForm"
 import {BaseURL} from "../../Constants/baseURL"
 import axios from 'axios'
 import {TextField} from '@mui/material';
-import {Button} from '@mui/material' 
+import {Button} from '@mui/material'
+import {Box} from "@mui/system";
+import {LoginStyle} from "./LoginStyle"
 
 
 
@@ -31,17 +33,18 @@ export const Login = () => {
     
 
     return(
-        <div>
-            <p>pagina Login</p>
-
-            <TextField id="outlined-basic" label="Email" variant="outlined" 
+        <LoginStyle>
+        <Box display="flex" m="10px" flexDirection="column">
+            <h1>LabEddit</h1>
+            
+            <TextField margin={"normal"} id="outlined-basic" label="Email" variant="outlined" 
              name={"email"} value={form.email} onChange={onChange} required />
-            <TextField id="outlined-basic" label="Senha" variant="outlined" 
+            <TextField margin={"normal"} id="outlined-basic" label="Senha" variant="outlined" 
              name={"password"} value={form.password} onChange={onChange} required />
             
             <Button variant="contained" onClick={() => fazerLogin()}>Entrar</Button>
-            <Button variant="contained" onClick={() => goToCadastro(navigate)}>Cadastrar</Button>
-            
-        </div>
+            <Button variant="contained" onClick={() => goToCadastro(navigate)}>Cadastrar</Button>    
+        </Box>
+        </LoginStyle>
     )
 }
