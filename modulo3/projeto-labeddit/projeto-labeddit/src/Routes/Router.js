@@ -1,9 +1,9 @@
 import React from 'react';
-import {Login} from "../Pages/Login";
+import {Login} from "../Pages/Login/Login";
 import {Cadastro} from "../Pages/Cadastro/Cadastro";
-import {Feed} from "../Pages/Feed";
+import {Feed} from "../Pages/Feed/Feed";
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import {Post} from "../Pages/Post";
+import {Post} from "../Pages/Post/Post";
 
 
 export const Router = () => {

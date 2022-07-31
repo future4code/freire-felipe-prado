@@ -5,6 +5,8 @@ import {useForm} from "../../Hooks/useForm"
 import axios from 'axios'
 import {BaseURL} from '../../Constants/baseURL'
 import { CadastroStyle } from "./CadastroStyle";
+import {TextField} from '@mui/material';
+import {Button} from '@mui/material' 
 
 
 export const Cadastro = () => {
@@ -30,11 +32,14 @@ export const Cadastro = () => {
 
     return(
         <CadastroStyle>
-            <input name={"username"} value={form.username} onChange={onChange} required placeholder="Nome do usuário" />
-            <input name={"email"} value={form.email} onChange={onChange} required placeholder="E-mail" />
-            <input name={"password"} value={form.password} onChange={onChange} required placeholder="Senha" />
+            <TextField id="outlined-basic" label="Nome do usuário" variant="outlined" 
+            name={"username"} value={form.username} onChange={onChange} required />
+            <TextField id="outlined-basic" label="E-mail" variant="outlined" 
+            name={"email"} value={form.email} onChange={onChange} required />
+            <TextField id="outlined-basic" label="Senha" variant="outlined" 
+            name={"password"} value={form.password} onChange={onChange} required  />
             <p>Cadastro</p>
-            <button onClick={() => Cadastrar()}>Cadastrar</button>            
+            <Button variant="contained" onClick={() => Cadastrar()}>Cadastrar</Button>            
         </CadastroStyle>
     )
 

@@ -1,11 +1,13 @@
 import axios from 'axios';
 import React, { useEffect } from 'react'
 import {useNavigate} from 'react-router-dom';
-import { goToPost } from "../Routes/Coordinator";
-import { BaseURL } from '../Constants/baseURL';
-import { useForm } from '../Hooks/useForm';
+import { goToPost } from "../../Routes/Coordinator";
+import { BaseURL } from '../../Constants/baseURL';
+import { useForm } from '../../Hooks/useForm';
 import { useState } from 'react';
-import { PostCard } from '../Components/PostCard';
+import { PostCard } from '../../Components/PostCard';
+import {TextField} from '@mui/material';
+import {Button} from '@mui/material' 
 
 
 export const Feed = () => {
@@ -84,9 +86,11 @@ export const Feed = () => {
 
     return (
         <div>
-            <input name={"title"} value={form.title} onChange={onChange} />
-            <input name={"body"} value={form.body} onChange={onChange} placeholder='Escreva seu Post'/>
-            <button onClick={postar}>Postar</button>
+            <TextField id="outlined-basic" label="Title" variant="outlined"
+             name={"title"} value={form.title} onChange={onChange} />
+            <TextField id="outlined-basic" label="Escreva seu Post" variant="outlined"
+             name={"body"} value={form.body} onChange={onChange} />
+            <Button variant="contained" onClick={postar}>Postar</Button>
             {mapearPosts}
         </div>
     )

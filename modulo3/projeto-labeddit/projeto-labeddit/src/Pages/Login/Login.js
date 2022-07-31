@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import { useNavigate } from "react-router-dom";
-import {goToCadastro, goToFeed} from "../Routes/Coordinator";
-import {useForm} from "../Hooks/useForm"
-import {BaseURL} from "../Constants/baseURL"
+import {goToCadastro, goToFeed} from "../../Routes/Coordinator";
+import {useForm} from "../../Hooks/useForm"
+import {BaseURL} from "../../Constants/baseURL"
 import axios from 'axios'
 import {TextField} from '@mui/material';
 import {Button} from '@mui/material' 
@@ -36,10 +36,12 @@ export const Login = () => {
 
             <TextField id="outlined-basic" label="Email" variant="outlined" 
              name={"email"} value={form.email} onChange={onChange} required />
-            <input name={"password"} value={form.password} onChange={onChange} required placeholder="Senha"/>
+            <TextField id="outlined-basic" label="Senha" variant="outlined" 
+             name={"password"} value={form.password} onChange={onChange} required />
             
             <Button variant="contained" onClick={() => fazerLogin()}>Entrar</Button>
-            <button onClick={() => goToCadastro(navigate)}>Cadastrar</button>
+            <Button variant="contained" onClick={() => goToCadastro(navigate)}>Cadastrar</Button>
+            
         </div>
     )
 }
