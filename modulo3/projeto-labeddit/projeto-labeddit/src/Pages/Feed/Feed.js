@@ -62,7 +62,7 @@ export const Feed = () => {
       });
   };
 
-  const desfazerCurtida = (id) => {
+ const desfazerCurtida = (id) => {
     axios
       .delete(`${BaseURL}/posts/${id}/votes`, { headers: headers })
       .then(() => {
