@@ -1,0 +1,18 @@
+{
+  "name": "lista",
+  "version": "1.0.0",
+  "description": "lista de exercicios semana 1",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "primeira",
+    "semana",
+    "lista",
+    "1"
+  ],
+  "author": "felipe",
+  "license": "ISC"
+}
